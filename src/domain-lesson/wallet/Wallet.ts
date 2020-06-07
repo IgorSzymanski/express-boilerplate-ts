@@ -40,12 +40,10 @@ const makeWallet = (email: string) =>
   map((email: email) => wallet({ email, points: [] }))(makeEmail(email))
 
 // Tutaj moze byc error lub Wallet
-const mozePortfel = makeWallet('igorbuziaczek.pl')
+const mozePortfel = makeWallet('igor@buziaczek.pl')
 
 // Application, dirty
 fold(
   (error: Error) => console.error(error.message),
   (wallet: Wallet) => console.log(wallet)
 )(mozePortfel)
-
-console.log(mozePortfel)

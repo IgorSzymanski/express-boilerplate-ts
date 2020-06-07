@@ -15,8 +15,6 @@
 let text = 'this is a text'
 const phoneNumber: number = 123
 
-let dupa: unknown = 213221
-
 const array: Array<number> = [1, 2, 3]
 const tuple: [number, string, boolean] = [1, 'text', true]
 const add2: (x: number) => number = (x) => x + 2
@@ -49,14 +47,12 @@ const someone: OptionalName = {
   id: 'someone',
 }
 
-type Container<O, X = number> = {
+type Container<O> = {
   myObject: O
-  lol: X
 }
 
-const container: Container<number, string> = {
+const container: Container<number> = {
   myObject: 123,
-  lol: '23123',
 }
 
 /**

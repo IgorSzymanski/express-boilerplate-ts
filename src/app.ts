@@ -1,8 +1,8 @@
 import express from 'express'
 import compression from 'compression'
 import { router } from './router'
-import './domain-lesson'
 
+import './domain-example'
 import './domain-lesson/wallet/Wallet'
 
 export const app = async () =>
