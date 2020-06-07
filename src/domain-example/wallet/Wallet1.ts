@@ -1,6 +1,6 @@
 // Wallet module.
 
-interface Wallet {
+interface Wallet1 {
   readonly email: string
   readonly points: Points[]
 }

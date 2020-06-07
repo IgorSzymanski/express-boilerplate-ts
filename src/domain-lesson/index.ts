@@ -10,12 +10,15 @@
  * 7. Property modifies.
  */
 
-const text = 'this is a text'
+/** */
+
+let text = 'this is a text'
 const phoneNumber: number = 123
 
-const array: Array<number> = [1, 2, 3]
-const tuple: [number, string] = [1, 'text']
+let dupa: unknown = 213221
 
+const array: Array<number> = [1, 2, 3]
+const tuple: [number, string, boolean] = [1, 'text', true]
 const add2: (x: number) => number = (x) => x + 2
 
 interface Square {
@@ -29,14 +32,11 @@ type Circle = {
 
 const square: Square = {
   x: 7,
-  y: 8,
-}
-
-const circle: Circle = {
-  r: 10,
+  y: 7,
 }
 
 type Shape = Square | Circle
+type Shape2 = Square & Circle
 
 type stringOrNumber = string | number
 
@@ -49,12 +49,14 @@ const someone: OptionalName = {
   id: 'someone',
 }
 
-type Container<O extends Shape> = {
+type Container<O, X = number> = {
   myObject: O
+  lol: X
 }
 
-const container: Container<Circle> = {
-  myObject: { r: 10 },
+const container: Container<number, string> = {
+  myObject: 123,
+  lol: '23123',
 }
 
 /**
@@ -70,3 +72,5 @@ const container: Container<Circle> = {
  * 6. No assignments in functions.
  * 7. Only functions with 0 or 1 argument.
  */
+
+const add = (x: number) => (y: number) => x + y

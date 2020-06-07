@@ -5,8 +5,10 @@ export interface SimplePoints extends Points<'simple'> {}
 
 export const isUnsigned = (x: number): Result<number> =>
   x >= 0 ? ok(x) : error(`${x} is not an unsigned number.`)
+
 export const isInteger = (x: number): Result<number> =>
   Number.isInteger(x) ? ok(x) : error(`${x} is not an integer.`)
+
 export const isUnsignedInteger = (x: number): Result<number> =>
   pipe(isUnsigned(x), chain(isInteger))
 

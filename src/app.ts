@@ -3,6 +3,8 @@ import compression from 'compression'
 import { router } from './router'
 import './domain-lesson'
 
+import './domain-lesson/wallet/Wallet'
+
 export const app = async () =>
   express()
     .set('port', process.env.PORT || 5000)
