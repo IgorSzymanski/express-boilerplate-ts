@@ -675,6 +675,11 @@
   dependencies:
     "@types/superagent" "*"
 
+"@types/validator@^13.0.0":
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/@types/validator/-/validator-13.0.0.tgz#365f1bf936aeaddd0856fc41aa1d6f82d88ee5b3"
+  integrity sha512-WAy5txG7aFX8Vw3sloEKp5p/t/Xt8jD3GRD9DacnFv6Vo8ubudAsRTXgxpQwU0mpzY/H8U4db3roDuCMjShBmw==
+
 "@types/yargs-parser@*":
   version "15.0.0"
   resolved "https://registry.yarnpkg.com/@types/yargs-parser/-/yargs-parser-15.0.0.tgz#cb3f9f741869e20cce330ffbeb9271590483882d"
@@ -1926,6 +1931,11 @@ forwarded@~0.1.2:
   version "0.1.2"
   resolved "https://registry.yarnpkg.com/forwarded/-/forwarded-0.1.2.tgz#98c23dab1175657b8c0573e8ceccd91b0ff18c84"
   integrity sha1-mMI9qxF1ZXuMBXPozszZGw/xjIQ=
+
+fp-ts@^2.6.2:
+  version "2.6.2"
+  resolved "https://registry.yarnpkg.com/fp-ts/-/fp-ts-2.6.2.tgz#0115221e223e0e4a1d08d93c0ebaee9241688cd1"
+  integrity sha512-RUm0iNcD7eMFZo6W1K10kqi0DyYX06lbbjyNgKwEWg1kPZw91ZXlkEx/9cII1x/jY4fHzh14+Hquk5sJnXBzQA==
 
 fragment-cache@^0.2.1:
   version "0.2.1"
@@ -4728,6 +4738,11 @@ validate-npm-package-license@^3.0.1:
   dependencies:
     spdx-correct "^3.0.0"
     spdx-expression-parse "^3.0.0"
+
+validator@^13.0.0:
+  version "13.0.0"
+  resolved "https://registry.yarnpkg.com/validator/-/validator-13.0.0.tgz#0fb6c6bb5218ea23d368a8347e6d0f5a70e3bcab"
+  integrity sha512-anYx5fURbgF04lQV18nEQWZ/3wHGnxiKdG4aL8J+jEDsm98n/sU/bey+tYk6tnGJzm7ioh5FoqrAiQ6m03IgaA==
 
 vary@~1.1.2:
   version "1.1.2"
