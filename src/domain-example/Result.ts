@@ -1,5 +1,5 @@
 import { right, left, Either, mapLeft } from 'fp-ts/lib/Either'
-export { map, chain, fold } from 'fp-ts/lib/Either'
+export { map, chain, fold, flatten } from 'fp-ts/lib/Either'
 export { pipe } from 'fp-ts/lib/pipeable'
 
 // Result is alias for Either

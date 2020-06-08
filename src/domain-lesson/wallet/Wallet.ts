@@ -1,5 +1,6 @@
 import v from 'validator'
 import { Either, right, left, map, fold } from 'fp-ts/lib/Either'
+import { pipe } from 'fp-ts/lib/pipeable'
 
 type email = string & { readonly email: unique symbol }
 
@@ -37,13 +38,13 @@ const wallet = ({ email, points }: WalletCreateDTO): Wallet => ({ email, points 
 
 // Smart constrcutor
 const makeWallet = (email: string) =>
-  map((email: email) => wallet({ email, points: [] }))(makeEmail(email))
+  pipe(
+    makeEmail(email),
+    map((email) => wallet({ email, points: [] }))
+  )
 
 // Tutaj moze byc error lub Wallet
 const mozePortfel = makeWallet('igor@buziaczek.pl')
 
 // Application, dirty
-fold(
-  (error: Error) => console.error(error.message),
-  (wallet: Wallet) => console.log(wallet)
-)(mozePortfel)
+pipe(mozePortfel, fold(console.error.bind(console), console.log.bind(console)))
