@@ -1,4 +1,4 @@
-import { Result, map } from '../../Result'
+import { map, flow } from '../../Result'
 import { Points } from '../Points'
 import { unsignedIntegerValidator } from '../validators/NumberValidators'
 
@@ -14,5 +14,4 @@ const simplePoints = (amount: number): SimplePoints => ({
 })
 
 // Smart constructor
-export const makeSimplePoints = (amount: number): Result<SimplePoints> =>
-  map((amount: number) => simplePoints(amount))(unsignedIntegerValidator(amount))
+export const makeSimplePoints = flow(unsignedIntegerValidator, map(simplePoints))

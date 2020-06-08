@@ -1,7 +1,7 @@
 // Wallet module.
 
 import { makeEmail, email } from './Email'
-import { Result, map, pipe } from '../Result'
+import { map, flow } from '../Result'
 import { Points } from './Points'
 
 export interface Wallet {
@@ -9,9 +9,9 @@ export interface Wallet {
   readonly points: Points[]
 }
 
-export const makeWallet = (email: string): Result<Wallet> => pipe(makeEmail(email), map(wallet))
-
 const wallet = (email: email): Wallet => ({ email, points: [] })
+
+export const makeWallet = flow(makeEmail, map(wallet))
 
 export const addPoints = (points: Points) => (wallet: Wallet): Wallet => ({
   ...wallet,

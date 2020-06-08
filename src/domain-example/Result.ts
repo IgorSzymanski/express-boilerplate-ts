@@ -1,4 +1,5 @@
 import { right, left, Either, mapLeft } from 'fp-ts/lib/Either'
+export { flow } from 'fp-ts/lib/function'
 export { map, chain, fold, flatten } from 'fp-ts/lib/Either'
 export { pipe } from 'fp-ts/lib/pipeable'
 

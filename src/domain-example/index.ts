@@ -1,5 +1,5 @@
 import { makeWallet, Wallet, addPoints } from './wallet/Wallet'
-import { Result, fold, map, flatten, pipe } from './Result'
+import { Result, fold, map, flatten, pipe, flow } from './Result'
 import { makeSimplePoints } from './wallet/points/SimplePoints'
 
 const goodWallet = makeWallet('ThisIs@mail.com')
@@ -7,10 +7,8 @@ const badWallet = makeWallet('thisisnotmail')
 
 const add5Points = pipe(makeSimplePoints(5), map(addPoints))
 const goodWalletWith5Points = pipe(
-  pipe(
-    add5Points,
-    map((addPoints) => pipe(goodWallet, map(addPoints)))
-  ),
+  add5Points,
+  flow(map((addPoints) => pipe(goodWallet, map(addPoints)))),
   flatten
 )
 
