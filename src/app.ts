@@ -1,6 +1,6 @@
 import express from 'express'
 import compression from 'compression'
-import { router } from './router'
+import { router } from '~/router'
 
 export const app = async () =>
   express()

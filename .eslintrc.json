@@ -1,0 +1,67 @@
+{
+    "env": {
+        "es2020": true,
+        "node": true
+    },
+    "extends": [
+        "eslint:recommended",
+        "plugin:@typescript-eslint/eslint-recommended",
+        "plugin:@typescript-eslint/recommended",
+        "plugin:import/typescript",
+        "prettier",
+        "prettier/@typescript-eslint"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaVersion": 11,
+        "sourceType": "module"
+    },
+    "plugins": [
+        "@typescript-eslint",
+        "prettier",
+        "import"
+    ],
+    "rules": {
+        "prettier/prettier": "error",
+        "indent": [
+            "error",
+            2
+        ],
+        "linebreak-style": [
+            "error",
+            "unix"
+        ],
+        "quotes": [
+            "error",
+            "single"
+        ],
+        "semi": [
+            "error",
+            "never"
+        ],
+        "@typescript-eslint/explicit-module-boundary-types": "off",
+        "no-prototype-builtins": "error",
+        "eqeqeq": "error",
+        "wrap-regex": "error",
+        "no-delete-var": "error",
+        "array-bracket-newline": "error",
+        "comma-style": "error",
+        "no-array-constructor": "error",
+        "no-console": "error",
+        "no-new-object": "error",
+        "no-trailing-spaces": "error",
+        "no-new-symbol": "error",
+        "no-var": "error",
+        "no-useless-rename": "error",
+        "prefer-arrow-callback": "error",
+        "import/no-mutable-exports": "error",
+        "import/first": "error",
+        "import/order": "error",
+        "import/newline-after-import": "error",
+        "import/no-default-export": "error",
+        "import/no-duplicates": "error",
+        "import/no-dynamic-require": "error",
+        "import/no-self-import": "error",
+        "import/no-commonjs": "error"
+    }
+}
