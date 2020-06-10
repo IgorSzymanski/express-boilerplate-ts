@@ -12,7 +12,9 @@
 
 /** */
 
+// eslint-disable-next-line
 let text = 'this is a text'
+// eslint-disable-next-line
 const phoneNumber: number = 123
 
 const array: Array<number> = [1, 2, 3]

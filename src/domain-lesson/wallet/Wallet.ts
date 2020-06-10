@@ -19,7 +19,7 @@ interface ExpiringPoints extends Points {
   expirationDate: string
 }
 
-export let points: ExpiringPoints = {
+export const points: ExpiringPoints = {
   amount: 15,
   expirationDate: Date(),
 }
@@ -47,4 +47,5 @@ const makeWallet = flow(
 const mozePortfel = makeWallet('igor@buziaczek.pl')
 
 // Application, dirty
+// eslint-disable-next-line no-console
 pipe(mozePortfel, fold(console.error.bind(console), console.log.bind(console)))
